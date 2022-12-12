@@ -7,17 +7,11 @@
 
 a = input('Введите число = ')
 c = 0
-if type(a) == int:
+if a != '.':
+    a = int(a)
     while a > 0:
         b = a % 10
         c = b + c
         a = a // 10
-        
-
-if type(a) == float:
-    while a > 0:
-        b = a % 10
-        c = b + c
-        a = a // 10
-        
+      
 print (c)
