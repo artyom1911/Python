@@ -7,11 +7,25 @@
 
 a = input('Введите число = ')
 c = 0
-if a != '.':
-    a = int(a)
+b = 1
+n = 0
+if '.' in a:
+    a = float(a)
+    while b > 0:
+        a = round (a,10)
+        a *= 10
+        b = a % 10
     while a > 0:
         b = a % 10
         c = b + c
         a = a // 10
-      
+        n = n + 1
+        
+else: 
+    a = float(a)
+    while a > 0:
+        b = a % 10
+        c = b + c
+        a = a // 10
+c = int(c)
 print (c)
